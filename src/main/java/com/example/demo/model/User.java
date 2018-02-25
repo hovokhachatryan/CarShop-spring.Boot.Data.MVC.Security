@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User  {
+public class User {
 
     @Id
     @Column
@@ -22,6 +22,11 @@ public class User  {
     @Column
     private String surname;
     @Column
+    private String email;
+    @Column
     private String password;
+    @Column(name = "user_type")
+    @Enumerated(EnumType.STRING)
+    private UserType userType;
 
 }
