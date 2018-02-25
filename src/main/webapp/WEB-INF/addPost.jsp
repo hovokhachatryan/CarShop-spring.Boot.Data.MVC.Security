@@ -1,4 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -13,20 +15,15 @@
 </head>
 <body>
 ADD POST<br>
-
-<%--<spring:form action="/addPost" modelAttribute="post" method="post" enctype="multipart/form-data">--%>
-    <%--MARK: <spring:input path="mark" title="mark" /><br>--%>
-    <%--YEAR: <spring:input path="year" title="year"/><br>--%>
-    <%--PRICE: <spring:input path="price" title="price"/><br>--%>
-    <%--COLOR: <spring:input path="color" title="color"/><br>--%>
-    <%--TEKLEPHONE: <spring:input path="userTelephone" title="telephone"/><br>--%>
-    <%--<input type="file" name="image">--%>
-    <%--&lt;%&ndash;<input value="${currentUser.user}" type="hidden" name="id">&ndash;%&gt;--%>
-    <%--<input type="submit" value="ADD POST">--%>
-<%--</spring:form>--%>
 <spring:form action="/addPost" method="post" modelAttribute="post" enctype="multipart/form-data">
     <spring:label path="mark">Mark:</spring:label>
-    <spring:input path="mark"/><br>
+    <spring:select path="mark">
+        <c:forEach items="${marks}" var="mark">
+            <form:option value="${mark}">
+                ${mark}
+            </form:option>
+        </c:forEach>
+    </spring:select><br>
 
     <spring:label path="year">Year:</spring:label>
     <spring:input path="year"/><br>
@@ -43,6 +40,7 @@ ADD POST<br>
     <%--<spring:select path="brand" items="${allBrands}" itemLabel="name"></spring:select><br>--%>
     <label for="image">Image:</label>
     <input type="file" id="image" name="image"/><br>
+    <input hidden type="text" name="id" value="${currentUser.user.id}">
     <input type="submit" value="ADD">
 </spring:form>
 </body>

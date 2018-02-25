@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-               .formLogin()
+                .formLogin()
                 .loginPage("/loginView")
                 .usernameParameter("j_email")
                 .passwordParameter("j_password")
@@ -36,25 +36,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/addPostView").hasAuthority("USER")
+                .antMatchers("/adminPage").hasAuthority("ADMIN")
                 .anyRequest().permitAll();
-//                .antMatchers("/addPostView").hasAuthority("USER");
-//                .antMatchers("/home").permitAll()
-//                .anyRequest().fullyAuthenticated()
-//                .and()
-//                .formLogin();
-//                .loginPage("/home")
-//                .failureUrl("/login?error")
-//                .usernameParameter("j_username")
-//                .passwordParameter("j_password")
-//                .permitAll();
-//                .and()
-//                .logout()
-//                .logoutUrl("/logout")
-//                .deleteCookies("remember-me")
-//                .logoutSuccessUrl("/");
-//                .permitAll()
-//                .and()
-//                .rememberMe();
     }
 
     @Autowired

@@ -25,7 +25,6 @@ CARS:<br>
         ${post.mark}<br>
         ${post.year}<br>
         ${post.price}<br>
-
         </div>
     </c:forEach>
 </div>

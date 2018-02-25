@@ -1,7 +1,6 @@
 package com.example.demo.contoller;
 
 import com.example.demo.model.Post;
-import com.example.demo.model.User;
 import com.example.demo.model.UserType;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.security.CurrentUser;
@@ -20,7 +19,7 @@ public class MainController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String homePage(ModelMap map) {
-        map.addAttribute("posts",postRepository.findAll());
+        map.addAttribute("posts", postRepository.findAll());
         map.addAttribute("post", new Post());
         return "index";
     }
