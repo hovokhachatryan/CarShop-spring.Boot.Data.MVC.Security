@@ -24,6 +24,9 @@ public class UserController {
 
     @PostMapping(value = "/addUser")
     public String addUser(@ModelAttribute("user") User user) {
+        if (user.getName().equals("") || user.getSurname().equals("") || user.getEmail().equals("") || user.getPassword().equals("")){
+            return "redirect:/registerView";
+        }
         user.setUserType(UserType.USER);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         userRepository.save(user);

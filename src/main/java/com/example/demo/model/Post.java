@@ -3,7 +3,6 @@ package com.example.demo.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
@@ -20,9 +19,11 @@ public class Post {
     @Column
     private String mark;
     @Column
+    private String model;
+    @Column
     private int year;
     @Column
-    private int price;
+    private double price;
     @Column
     private String color;
     @ManyToOne()

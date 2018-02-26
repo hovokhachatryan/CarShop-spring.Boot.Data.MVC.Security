@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,11 +31,21 @@ public class PostController {
     @Value("${eshop.product.upload.path}")
     private String imageUploadPath;
 
-    @RequestMapping(value = "/addPostView",method = RequestMethod.GET)
+    @RequestMapping(value = "/addPostView", method = RequestMethod.GET)
     public String addPostView(ModelMap map) {
         List<String> marks = new LinkedList<>();
-        marks.add("MERSEDES"); marks.add("BMW");marks.add("AUDI");marks.add("LEXUS");marks.add("TOYOTA");marks.add("OPEL");
-        map.addAttribute("marks",marks);
+        List<Integer> year = new LinkedList<>();
+        marks.add("MERSEDES");
+        marks.add("BMW");
+        marks.add("AUDI");
+        marks.add("LEXUS");
+        marks.add("TOYOTA");
+        marks.add("OPEL");
+        for (int i = 2000; i < 2019; i++) {
+            year.add(i);
+        }
+        map.addAttribute("marks", marks);
+        map.addAttribute("years", year);
         map.addAttribute("post", new Post());
         CurrentUser principal = (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         map.addAttribute("currentUser", principal);
@@ -42,7 +53,11 @@ public class PostController {
     }
 
     @RequestMapping(value = "/addPost", method = RequestMethod.POST)
-    public String addBrand(@ModelAttribute(name = "post") Post post, @RequestParam(value = "image")MultipartFile file, @RequestParam(value = "id")User user) throws IOException {
+    public String addBrand(@ModelAttribute(name = "post") Post post, @RequestParam(value = "image") MultipartFile file, @RequestParam(value = "id") User user) throws IOException {
+//        if (post.getMark().equals("") || post.getModel().equals("") || post.getColor().equals("") ||
+//                post.getPicUrl().equals("")  || post.getYear() == 0 || post.getUserTelephone() == 0) {
+//            return "redirect:/addPostView";
+//        }
         File dir = new File(imageUploadPath);
         if (!dir.exists()) {
             dir.mkdir();
@@ -62,5 +77,13 @@ public class PostController {
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
         IOUtils.copy(in, response.getOutputStream());
     }
+
+    @GetMapping(value = "/getPost")
+    public String deleteUser(@RequestParam("id") int id,ModelMap map) {
+        Post post = postRepository.getOne(id);
+        map.addAttribute("post",post);
+        return "postView";
+    }
+
 
 }

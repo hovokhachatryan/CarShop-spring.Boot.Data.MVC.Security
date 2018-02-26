@@ -15,10 +15,10 @@
 <div>
     REGISTER:
     <spring:form action="/addUser" modelAttribute="user" method="post" >
-        NAME:<spring:input path="name" title="name"/> <br>
-        SURNAME:<spring:input path="surname" title="surname"/><br>
-        EMAIL:<spring:input path="email" title="email"/><br>
-        PASSWORD:<spring:input path="password" title="password"/><br>
+        NAME:<spring:input path="name" title="name" /> * <br>
+        SURNAME:<spring:input path="surname" title="surname"/> *<br>
+        EMAIL:<spring:input path="email" title="email"/> *<br>
+        PASSWORD:<spring:input path="password" title="password"/> *<br>
         <input type="submit" value="REGISTER">
     </spring:form>
 </div>
