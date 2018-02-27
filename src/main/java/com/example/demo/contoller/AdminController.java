@@ -33,7 +33,7 @@ public class AdminController {
         return "redirect:/adminPage";
     }
 
-    @GetMapping(value = "/deletePost")
+    @GetMapping(value = "/deletePostForAdmin")
     public String deletePost(@RequestParam("id") int id) {
         postRepository.delete(id);
         return "redirect:/adminPage";

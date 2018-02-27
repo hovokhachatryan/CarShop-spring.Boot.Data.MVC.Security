@@ -17,18 +17,19 @@
 <br>
 <a href="/registerView">REGISTER</a><br><br>
 <%--<a href="/logout">LOGOUT</a><br><br>--%>
-<a href="/addPostView" >ADD POST</a>
-CARS:<br>
+ALL POSTS:<br>
 <div style="float: left">
     <c:forEach items="${posts}" var="post">
         <a href="/getPost?id=${post.id}">
-        <div style="border: #2c2c2c solid 1px">
-        <img src="/image?fileName=${post.picUrl}" width="200"/><br>
-        ${post.mark}<br>
-        ${post.model}<br>
-        ${post.year}<br>
-        $ ${post.price}<br>
-        </div>
+            <div style="float: left" >
+                <div style= "border: #2c2c2c solid 1px">
+                    <img src="/image?fileName=${post.picUrl}" width="200" height="200"/><br>
+                        ${post.mark}<br>
+                        ${post.model}<br>
+                        ${post.year}<br>
+                    $ ${post.price}<br>
+                </div>
+            </div>
         </a>
     </c:forEach>
 </div>

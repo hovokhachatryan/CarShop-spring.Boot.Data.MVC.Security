@@ -12,24 +12,24 @@
     <title>Home</title>
 </head>
 <body>
-<%--<a href="/loginView">LOGIN</a>--%>
+WELCOME: ${user.user.name} ${user.user.surname}
 <br>
-<%--<a href="/registerView">REGISTER</a><br><br>--%>
+<a href="/profile?id=${user.user.id}">MY PROFILE</a><br>
 <a href="/logout">LOGOUT</a><br><br>
-<%--<a href="/addPostView" >ADD POST</a>--%>
-CARS:<br>
-<div style="float: left">
+<a href="/addPostView" >ADD POST</a><br><br>
+ALL POSTS:<br>
     <c:forEach items="${posts}" var="post">
         <a href="/getPost?id=${post.id}">
+            <div style=" float: left">
             <div style="border: #2c2c2c solid 1px">
-                <img src="/image?fileName=${post.picUrl}" width="200"/><br>
+                <img src="/image?fileName=${post.picUrl}" width="200" height="200"/><br>
                     ${post.mark}<br>
                     ${post.model}<br>
                     ${post.year}<br>
                 $ ${post.price}<br>
             </div>
+            </div>
         </a>
     </c:forEach>
-</div>
 </body>
 </html>

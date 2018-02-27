@@ -31,10 +31,13 @@ public class MainController {
     }
 
     @RequestMapping(value = "/loginSuccess", method = RequestMethod.GET)
-    public String loginSuccess() {
+    public String loginSuccess(ModelMap map) {
         CurrentUser principal = (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if (principal.getUser().getUserType() == UserType.USER) {
-            return "redirect:/addPostView";
+            map.addAttribute("posts", postRepository.findAll());
+            map.addAttribute("post", new Post());
+            map.addAttribute("user", principal);
+            return "indexLogin";
         }
         return "redirect:/";
     }

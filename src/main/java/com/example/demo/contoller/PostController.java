@@ -68,7 +68,7 @@ public class PostController {
         post.setPicUrl(picName);
         post.setUser(user);
         postRepository.save(post);
-        return "redirect:/home";
+        return "redirect:/loginSuccess";
     }
 
     @RequestMapping(value = "/image", method = RequestMethod.GET)
@@ -83,6 +83,12 @@ public class PostController {
         Post post = postRepository.getOne(id);
         map.addAttribute("post",post);
         return "postView";
+    }
+
+    @GetMapping(value = "/deletePost")
+    public String deletePost(@RequestParam("id") int id) {
+        postRepository.delete(id);
+        return "redirect:/profile";
     }
 
 
