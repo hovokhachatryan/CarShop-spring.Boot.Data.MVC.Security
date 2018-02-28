@@ -3,7 +3,9 @@ package com.example.demo.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "post")
@@ -32,7 +34,7 @@ public class Post {
     private int userTelephone;
     @Column
     private String timestamp;
-    @Column(name = "pic_url")
-    private String picUrl;
+    @ManyToOne()
+    private Picture picture;
 
 }

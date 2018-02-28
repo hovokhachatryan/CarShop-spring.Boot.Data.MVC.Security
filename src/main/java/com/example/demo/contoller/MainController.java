@@ -1,6 +1,7 @@
 package com.example.demo.contoller;
 
 import com.example.demo.model.Post;
+import com.example.demo.model.User;
 import com.example.demo.model.UserType;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.security.CurrentUser;
@@ -11,6 +12,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.LinkedList;
+import java.util.List;
+
 @Controller
 public class MainController {
 
@@ -19,11 +23,23 @@ public class MainController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String homePage(ModelMap map) {
+        List<String> marks = new LinkedList<>();
+        List<Integer> year = new LinkedList<>();
+        marks.add("MERSEDES");
+        marks.add("BMW");
+        marks.add("AUDI");
+        marks.add("LEXUS");
+        marks.add("TOYOTA");
+        marks.add("OPEL");
+        for (int i = 2000; i < 2019; i++) {
+            year.add(i);
+        }
+        map.addAttribute("marks", marks);
+        map.addAttribute("years", year);
         map.addAttribute("posts", postRepository.findAll());
         map.addAttribute("post", new Post());
-        return "index";
+            return "index";
     }
-
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String main(ModelMap map) {
@@ -39,6 +55,6 @@ public class MainController {
             map.addAttribute("user", principal);
             return "indexLogin";
         }
-        return "redirect:/";
+        return "redirect:/home";
     }
 }

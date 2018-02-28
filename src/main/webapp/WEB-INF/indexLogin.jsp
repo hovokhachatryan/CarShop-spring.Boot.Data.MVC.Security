@@ -22,7 +22,7 @@ ALL POSTS:<br>
         <a href="/getPost?id=${post.id}">
             <div style=" float: left">
             <div style="border: #2c2c2c solid 1px">
-                <img src="/image?fileName=${post.picUrl}" width="200" height="200"/><br>
+                <img src="/image?fileName=${post.picture.pic1}" width="200" height="200"/><br>
                     ${post.mark}<br>
                     ${post.model}<br>
                     ${post.year}<br>

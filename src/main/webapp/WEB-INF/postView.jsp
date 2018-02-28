@@ -12,7 +12,12 @@
     <title>Post</title>
 </head>
 <body>
-            <img src="/image?fileName=${post.picUrl}" width="300"/><br>
+            <img src="/image?fileName=${post.picture.pic1}" width="300"/><br>
+            <img src="/image?fileName=${post.picture.pic2}" width="100"/>
+            <img src="/image?fileName=${post.picture.pic3}" width="100"/>
+            <img src="/image?fileName=${post.picture.pic4}" width="100"/>
+            <img src="/image?fileName=${post.picture.pic5}" width="100"/>
+            <img src="/image?fileName=${post.picture.pic6}" width="100"/><br>
               MARK:  ${post.mark}<br>
               YEAR:  ${post.year}<br>
               MODEL: ${post.model}<br>

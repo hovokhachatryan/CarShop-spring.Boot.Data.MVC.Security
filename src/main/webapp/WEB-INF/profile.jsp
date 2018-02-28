@@ -20,8 +20,8 @@ EMAIL:${user.email}<br>
 MY POSTS:
 <ul>
     <c:forEach items="${posts}" var="post">
-        <img src="/image?fileName=${post.picUrl}" width="100"/>
-        <li>${post.mark} ${post.year} <a href="/deletePost?id=${post.id}">X</a></li>
+        <img src="/image?fileName=${post.picture.pic1}" width="100"/>
+        <li>${post.mark} ${post.year} <a href="/deleteMyPost?id=${post.id}">X</a></li>
     </c:forEach>
 </ul>
 </body>

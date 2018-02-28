@@ -26,7 +26,7 @@ ADD POST<br>
     </spring:select><br>
 
     <spring:label path="model">Model:</spring:label>
-    <spring:input path="model"/> *<br>
+    <spring:input maxlength="20" path="model"/> *<br>
 
     <spring:label path="year">Year:</spring:label>
     <spring:select path="year">
@@ -45,11 +45,27 @@ ADD POST<br>
     <spring:input path="color"/> *<br>
 
     <spring:label path="userTelephone">Telepohne:</spring:label>
-    <spring:input path="userTelephone"/><br>
+    <spring:input maxlength="9" path="userTelephone"/><br>
     <%--<spring:select  items="${allCategories}" itemLabel="name"></spring:select><br>--%>
     <%--<spring:select path="brand" items="${allBrands}" itemLabel="name"></spring:select><br>--%>
-    <label for="image">Image:</label>
-    <input type="file" id="image" name="image"/> *<br>
+    <label for="image1">Image1:</label>
+    <input type="file" id="image1" name="image1"/> *<br>
+
+    <label for="image2">Image2:</label>
+    <input type="file" id="image2" name="image2"/> *<br>
+
+    <label for="image3">Image3:</label>
+    <input type="file" id="image3" name="image3"/> *<br>
+
+    <label for="image4">Image4:</label>
+    <input type="file" id="image4" name="image4"/> *<br>
+
+    <label for="image5">Image5:</label>
+    <input type="file" id="image5" name="image5"/> *<br>
+
+    <label for="image6">Image6:</label>
+    <input type="file" id="image6" name="image6"/> *<br>
+
     <input hidden type="text" name="id" value="${currentUser.user.id}">
     <input type="submit" value="ADD">
 </spring:form>
