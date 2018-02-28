@@ -41,7 +41,7 @@ public class PostController {
     public String addPostView(ModelMap map) {
         List<String> marks = new LinkedList<>();
         List<Integer> year = new LinkedList<>();
-        marks.add("MERSEDES");
+        marks.add("MERCEDES");
         marks.add("BMW");
         marks.add("AUDI");
         marks.add("LEXUS");
