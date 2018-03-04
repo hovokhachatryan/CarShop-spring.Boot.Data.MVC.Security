@@ -16,10 +16,10 @@
 <body>
 <div>
     <img width="100%" height="100" src="img/fon.jpg">
-    <div style="margin-left:9%;margin-top:-4.9%">
+    <div class="indexLogin-logoCarShop">
         <a  type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
     </div>
-    <div  style="margin-top:-3.4%;margin-left:1%">
+    <div class="index-login-cars">
         <ul>
             <li>Մեքենաներ
                 <ul>
@@ -33,10 +33,10 @@
 
         </ul>
     </div>
-    <div style="margin-left:74%;margin-top:-3.2%">
+    <div class="indexLogin-myPage">
         <a href="#"><ul><li> Իմ Էջը </li></ul></a>
     </div>
-    <div style="margin-left:84%;margin-top:-3.4%">
+    <div class="index-login-logout">
         <a href="/logout"><ul><li> Ելք </li></ul></a>
     </div>
 
@@ -45,27 +45,6 @@
             background-color: #909ca0;
         }
 
-        .wrapper {
-            width: 1000px;
-            margin: auto;
-            margin-top: 50px;
-        }
-        a{
-            text-decoration: none;
-
-        }
-
-        .wrapper > a {
-            display: block;
-            float: left;
-            width: 24%;
-            background-color: #fdfbff;
-            border-radius: 5px;
-            text-align: center;
-            margin: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
-        }
-        .wrapper > a:hover { background-color: #d1d3d6; }
     </style>
     <%--<div style="margin-top:0.5%">--%>
     <%--<img width="100%" height="700"src="../img/LoginFon.jpg">--%>

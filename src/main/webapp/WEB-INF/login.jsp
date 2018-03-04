@@ -8,10 +8,10 @@
 </head>
 <body>
 <img width="100%" height="100" src="../img/fon.jpg">
-<div style="margin-left:8.9%;margin-top:-4.9%">
+<div class="login-logoCarShop">
     <a  type="submit" href="/home"><img style="width:130px;height:48px" src="../img/LogoCarShopddad.jpg"></a>
 </div>
-<div  style="margin-top:-3.4%;margin-left:0.8%">
+<div class="login-meqenamer">
     <ul>
         <li>Մեքենաներ
             <ul>
@@ -23,7 +23,7 @@
             </ul></li>
     </ul>
 </div>
-<div style="margin-left:74%;margin-top:-3.3%">
+<div class="login-myPage">
     <ul><li> Իմ Էջը</li></ul>
 </div>
 </div>
@@ -41,7 +41,7 @@
 
 </div>
 <div>
-    <div style="margin-left:87%;margin-top:-39.4%">
+    <div class="login-register">
         <a href="/registerView"> <ul><li> Գրանցվել </li></ul></a>
     </div>
 </div>

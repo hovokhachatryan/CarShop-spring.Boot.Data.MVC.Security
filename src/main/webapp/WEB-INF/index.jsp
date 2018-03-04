@@ -21,10 +21,10 @@
 
 <div>
 <img width="100%" height="100" src="img/fon.jpg">
-<div style="margin-left:9%;margin-top:-4.9%">
+<div class="index-logo-carShop">
     <a  type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
-<div  style="margin-top:-3.7%;margin-left:1%">
+<div class="index-car">
     <ul>
         <li>Մեքենաներ
             <ul>
@@ -39,10 +39,10 @@
 
     </ul>
 </div>
-<div style="margin-left:74%;margin-top:-3.2%">
+<div class="index-login">
     <a href="/loginView"><ul><li> Մուտք </li></ul></a>
 </div>
-<div style="margin-left:80%;margin-top:-3.4%">
+<div class="index-register">
     <a href="/registerView"><ul><li> Գրանցվել </li></ul></a>
 </div>
 

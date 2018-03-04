@@ -16,10 +16,10 @@
 <div>
 
     <img width="100%" height="100" src="img/fon.jpg">
-    <div style="margin-left:8.9%;margin-top:-5.2%">
+    <div class="register-logoCarShop">
         <a  type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
     </div>
-    <div  style="margin-top:-3.4%;margin-left:0.8%">
+    <div class="register-car" >
         <ul>
             <li>Մեքենաներ
                 <ul>
@@ -33,13 +33,13 @@
 
         </ul>
     </div>
-    <div style="margin-left:74%;margin-top:-3.3%">
+    <div class="register-myPage">
         <ul><li> Իմ Էջը</li></ul>
     </div>
 </div>
 
 </div>
-<div style="margin-top:10%;margin-left:33%;width:500px;height:300px">
+<div class="register-inputs">
     <form action="/addUser" modelAttribute="" method="post" >
     <%--NAME:<spring:input path="name" title="name" /> * <br>--%>
     <%--SURNAME:<spring:input path="surname" title="surname"/> *<br>--%>
@@ -57,7 +57,7 @@
                         </form>
 </div>
 <div>
-    <div style="margin-left:87%;margin-top:-34.3%">
+    <div class="register-login">
         <a href="/loginView"><ul><li> Մութք </li></ul></a>
     </div>
 </div>

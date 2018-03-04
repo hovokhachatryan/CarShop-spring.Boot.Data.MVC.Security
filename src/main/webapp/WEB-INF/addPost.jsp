@@ -11,10 +11,10 @@
 </head>
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
-<div style="margin-left:9%;margin-top:-4.9%">
+<div class="addPost-logoCarShop">
     <a  type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
-<div  style="margin-top:-3.7%;margin-left:1%">
+<div class="addPost-car">
     <ul>
         <li>Մեքենաներ
             <ul>
@@ -28,15 +28,15 @@
 
     </ul>
 </div>
-<div style="margin-left:74%;margin-top:-3.3%">
+<div class="addPost-myPage">
     <a><ul><li> Իմ Էջը </li></ul></a>
 </div>
 </div>
-<div style="margin-left:80%;margin-top:-3.4%">
+<div class="addPost-logout">
     <a href="/logout"><ul><li> Ելք </li></ul></a>
 </div>
 </div>
-<div style="width:25%;height:25%; margin-top:7%;margin-left:35%">
+<div class="addPost-inputs">
     <spring:form action="/addPost" method="post" modelAttribute="post" enctype="multipart/form-data">
         <spring:label cssStyle="color: #000000" path="mark" >Մակնիշ<a style="color: red">*</a>:</spring:label>
         <spring:select path="mark">
@@ -93,6 +93,5 @@
         <input type="submit" value="Ավելացնել">
     </spring:form>
 </div>
->>>>>>> Stashed changes
 </body>
 </html>
