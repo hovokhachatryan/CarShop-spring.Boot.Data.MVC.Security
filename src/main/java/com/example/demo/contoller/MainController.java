@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class MainController {
@@ -22,7 +23,7 @@ public class MainController {
     PostRepository postRepository;
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String homePage(ModelMap map) {
+    public String homePage(ModelMap map, Locale locale) {
         List<String> marks = new LinkedList<>();
         List<Integer> year = new LinkedList<>();
         marks.add("MERSEDES");

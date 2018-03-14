@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -12,6 +12,7 @@
 <head>
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script src="../js/jquery.js"></script>
 </head>
 <body>
 <div>
@@ -19,25 +20,35 @@
     <div class="indexLogin-logoCarShop">
         <a  type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
     </div>
-    <div class="index-login-cars">
+    <div class="addPost-car">
         <ul>
-            <li>Մեքենաներ
+            <li><spring:message key="main.cars"/>
                 <ul>
-                    <li>Mercedes-Benz</li>
-                    <li>BMW</li>
-                    <li>Nissan</li>
-                    <li>Shcoda</li>
-                    <li>Mitsubishi</li>
-                </ul></li>
-
+                    <a href="/getPostByMark?mark=MERCEDES">
+                        <li>Mercedes-Benz</li>
+                    </a>
+                    <a href="/getPostByMark?mark=BMW">
+                        <li>BMW</li>
+                    </a>
+                    <a href="/getPostByMark?mark=AUDI">
+                        <li>AUDI</li>
+                    </a>
+                    <a href="/getPostByMark?mark=OPEL">
+                        <li>OPEL</li>
+                    </a>
+                    <a href="/getPostByMark?mark=TOYOTA">
+                        <li>TOYOTA</li>
+                    </a>
+                </ul>
+            </li>
 
         </ul>
     </div>
     <div class="indexLogin-myPage">
-        <a href="#"><ul><li> Իմ Էջը </li></ul></a>
+        <a href="/profile?id=${user.user.id}"><ul><li> <spring:message key="main.profile"/> </li></ul></a>
     </div>
     <div class="index-login-logout">
-        <a href="/logout"><ul><li> Ելք </li></ul></a>
+        <a href="/logout"><ul><li> <spring:message key="main.logout"/> </li></ul></a>
     </div>
 
     <style>
@@ -45,11 +56,34 @@
             background-color: #909ca0;
         }
 
+        .wrapper {
+            width: 1000px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        a{
+            text-decoration: none;
+
+        }
+
+        .wrapper > a {
+            display: block;
+            float: left;
+            width: 24%;
+            background-color: #fdfbff;
+            border-radius: 5px;
+            text-align: center;
+            margin: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
+        }
+        .wrapper > a:hover { background-color: #d1d3d6; }
     </style>
     <%--<div style="margin-top:0.5%">--%>
     <%--<img width="100%" height="700"src="../img/LoginFon.jpg">--%>
     <%--</div>--%>
     <%--<a href="/logout">LOGOUT</a><br><br>--%>
+    <input placeholder="MARK,MODEL,PRICE,YEAR" id="value" type="text" />
+
     <div class="wrapper">
         <c:forEach items="${posts}" var="post">
             <a href="/getPost?id=${post.id}">
@@ -64,4 +98,18 @@
     </div>
 </div>
 </body>
+<script>
+    $('#value').keyup(function () {
+        var valThis = $(this).val().toLowerCase();
+        if (valThis == "") {
+            $('.wrapper > a').show();
+        } else {
+            $('.wrapper > a').each(function () {
+                var text = $(this).text().toLowerCase();
+                (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+            });
+        }
+        ;
+    });
+</script>
 </html>

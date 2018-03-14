@@ -1,4 +1,6 @@
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+
 <%--
   Created by IntelliJ IDEA.
   User: User
@@ -21,7 +23,9 @@
     </div>
     <div class="register-car" >
         <ul>
-            <li>Մեքենաներ
+            <li><spring:message key="main.cars
+
+"/>
                 <ul>
                     <li>Mercedes-Benz</li>
                     <li>BMW</li>
@@ -45,20 +49,20 @@
     <%--SURNAME:<spring:input path="surname" title="surname"/> *<br>--%>
     <%--EMAIL:<spring:input path="email" title="email"/> *<br>--%>
     <%--PASSWORD:<spring:input path="password" title="password"/> *<br>--%>
-    <label style="color: #000000">Անուն</label>
+    <label style="color: #000000"><spring:message key="main.name"/> </label>
     <input type="text" name="name" placeholder="Անուն..">
-        <label style="color: #000000">Ազգանուն</label>
+        <label style="color: #000000"><spring:message key="main.surname"/></label>
         <input type="text" name="surname" placeholder="Ազգանուն..">
-            <label style="color: #000000">էլ․ Հասցե</label>
+            <label style="color: #000000"><spring:message key="main.mail"/></label>
             <input type="email" name="email" placeholder="Էլ․ Հասցե..">
-                <label style="color: #000000">Գաղտնաբառ</label>
-                <input type="password" name="password" placeholder="Գախնաբառ..">
+                <label style="color: #000000"><spring:message key="main.password"/></label>
+                <input minlength="5" maxlength="10" type="password" name="password" placeholder="Գախնաբառ..">
                     <input type="submit" value="Գրանցվել">
                         </form>
 </div>
 <div>
     <div class="register-login">
-        <a href="/loginView"><ul><li> Մութք </li></ul></a>
+        <a href="/loginView"><ul><li> <spring:message key="main.login"/> </li></ul></a>
     </div>
 </div>
 </div>
