@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CarShop</title>
+    <title>ADS</title>
     <link rel="stylesheet" type="text/css" href="../style/style.css">
 </head>
 <body>
@@ -67,8 +67,7 @@
         </spring:select><br>
 
         <spring:label cssStyle="color: #000000" path="model">Մոդել<a style="color: red">*</a>:</spring:label>
-        <spring:select id="carmodel" path="model"  >
-
+        <spring:select id="carmodel" path="model">
         </spring:select><br>
 
         <spring:label cssStyle="color: #000000" path="year">Տարեթիվ<a style="color: red">*</a>:</spring:label>
@@ -128,9 +127,11 @@
     carsAndModels['TOYOTA'] = ['PRADO', 'CAMRY', 'LAND CRAUSER'];
 
     function ChangeCarList() {
+
         var carList = document.getElementById("car");
         var modelList = document.getElementById("carmodel");
         var selCar = carList.options[carList.selectedIndex].value;
+
         while (modelList.options.length) {
             modelList.remove(0);
         }
@@ -138,8 +139,9 @@
         if (cars) {
             var i;
             for (i = 0; i < cars.length; i++) {
-                var car = new Option(cars[i], i);
+                var car = new Option(cars[i],i.stringValue);
                 modelList.options.add(car);
+
             }
         }
     }

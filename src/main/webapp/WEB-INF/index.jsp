@@ -23,7 +23,7 @@
 
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
 <div class="addPost-car">
     <ul>
@@ -49,6 +49,13 @@
         </li>
 
     </ul>
+</div>
+<div class="index-login">
+    <a href="/addPostView">
+        <ul>
+            <li> <spring:message key="main.login"/></li>
+        </ul>
+    </a>
 </div>
 <div class="index-login">
     <a href="/loginView">

@@ -24,19 +24,19 @@
         <ul>
             <li><spring:message key="main.cars"/>
                 <ul>
-                    <a href="/getPostByMark?mark=MERCEDES">
+                    <a href="/getPostByMarkLogin?mark=MERCEDES">
                         <li>Mercedes-Benz</li>
                     </a>
-                    <a href="/getPostByMark?mark=BMW">
+                    <a href="/getPostByMarkLogin?mark=BMW">
                         <li>BMW</li>
                     </a>
-                    <a href="/getPostByMark?mark=AUDI">
+                    <a href="/getPostByMarkLogin?mark=AUDI">
                         <li>AUDI</li>
                     </a>
-                    <a href="/getPostByMark?mark=OPEL">
+                    <a href="/getPostByMarkLogin?mark=OPEL">
                         <li>OPEL</li>
                     </a>
-                    <a href="/getPostByMark?mark=TOYOTA">
+                    <a href="/getPostByMarkLogin?mark=TOYOTA">
                         <li>TOYOTA</li>
                     </a>
                 </ul>
@@ -86,7 +86,7 @@
 
     <div class="wrapper">
         <c:forEach items="${posts}" var="post">
-            <a href="/getPost?id=${post.id}">
+            <a href="/getPostLogin?id=${post.id}">
                 <img src="/image?fileName=${post.picture.pic1}" width="240" height="200"/><br>
                 <div style="margin-left: -43%;color: #8bc1ff">${post.mark}
                         ${post.model}<br></div>

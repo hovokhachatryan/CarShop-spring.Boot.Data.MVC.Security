@@ -3,6 +3,7 @@ package com.example.demo.contoller;
 import com.example.demo.model.Picture;
 import com.example.demo.model.Post;
 import com.example.demo.model.User;
+import com.example.demo.model.UserType;
 import com.example.demo.repository.PictureRepository;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.security.CurrentUser;
@@ -125,12 +126,29 @@ public class PostController {
         return "postView";
     }
 
+    @GetMapping(value = "/getPostLogin")
+    public String getPostLogin(@RequestParam("id") int id, ModelMap map) {
+        Post post = postRepository.getOne(id);
+        map.addAttribute("post", post);
+        CurrentUser principal = (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        map.addAttribute("user",principal);
+        return "postViewLogin";
+    }
+
     @GetMapping(value = "/getPostByMark")
     public String getPostByMark(@RequestParam("mark") String mark, ModelMap map) {
-
         List<Post> cars = postRepository.findAllByMark(mark);
         map.addAttribute("posts", cars);
         return "resultPosts";
+    }
+
+    @GetMapping(value = "/getPostByMarkLogin")
+    public String getPostByMarkLogin(@RequestParam("mark") String mark, ModelMap map) {
+        List<Post> cars = postRepository.findAllByMark(mark);
+        map.addAttribute("posts", cars);
+        CurrentUser principal = (CurrentUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        map.addAttribute("user",principal);
+        return "resultPostsLogin";
     }
 
     @GetMapping(value = "/deleteMyPost")

@@ -3,8 +3,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 26.02.2018
-  Time: 20:52
+  Date: 14.03.2018
+  Time: 20:37
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,30 +12,31 @@
 <head>
     <title>${post.year} ${post.mark} ${post.model}</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+
 </head>
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
 <div class="addPost-car">
     <ul>
         <li>
             <spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMarkLogin?mark=MERCEDES">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
+                <a href="/getPostByMarkLogin?mark=BMW">
                     <li>BMW</li>
                 </a>
-                <a href="/getPostByMark?mark=AUDI">
+                <a href="/getPostByMarkLogin?mark=AUDI">
                     <li>AUDI</li>
                 </a>
-                <a href="/getPostByMark?mark=OPEL">
+                <a href="/getPostByMarkLogin?mark=OPEL">
                     <li>OPEL</li>
                 </a>
-                <a href="/getPostByMark?mark=TOYOTA">
+                <a href="/getPostByMarkLogin?mark=TOYOTA">
                     <li>TOYOTA</li>
                 </a>
             </ul>
@@ -43,19 +44,25 @@
 
     </ul>
 </div>
-            <img src="/image?fileName=${post.picture.pic1}" width="300"/><br>
-            <img src="/image?fileName=${post.picture.pic2}" width="100"/>
-            <img src="/image?fileName=${post.picture.pic3}" width="100"/>
-            <img src="/image?fileName=${post.picture.pic4}" width="100"/>
-            <img src="/image?fileName=${post.picture.pic5}" width="100"/>
-            <img src="/image?fileName=${post.picture.pic6}" width="100"/><br>
-              MARK:  ${post.mark}<br>
-              YEAR:  ${post.year}<br>
-              MODEL: ${post.model}<br>
-              PRICE: ${post.price} $<br>
-              COLOR: ${post.color}<br>
-              CONTACT: ${post.userTelephone}<br>
-              AUTHOR: ${post.user.name} ${post.user.surname}<br>
+<div class="indexLogin-myPage">
+    <a href="/profile?id=${user.user.id}"><ul><li> <spring:message key="main.profile"/> </li></ul></a>
+</div>
+<div class="index-login-logout">
+    <a href="/logout"><ul><li> <spring:message key="main.logout"/> </li></ul></a>
+</div>
+<img src="/image?fileName=${post.picture.pic1}" width="300"/><br>
+<img src="/image?fileName=${post.picture.pic2}" width="100"/>
+<img src="/image?fileName=${post.picture.pic3}" width="100"/>
+<img src="/image?fileName=${post.picture.pic4}" width="100"/>
+<img src="/image?fileName=${post.picture.pic5}" width="100"/>
+<img src="/image?fileName=${post.picture.pic6}" width="100"/><br>
+MARK:  ${post.mark}<br>
+YEAR:  ${post.year}<br>
+MODEL: ${post.model}<br>
+PRICE: ${post.price} $<br>
+COLOR: ${post.color}<br>
+CONTACT: ${post.userTelephone}<br>
+AUTHOR: ${post.user.name} ${post.user.surname}<br>
 </body>
 <style>
     a[type=submit]:hover {
@@ -85,4 +92,5 @@
 
     }
 </style>
+
 </html>

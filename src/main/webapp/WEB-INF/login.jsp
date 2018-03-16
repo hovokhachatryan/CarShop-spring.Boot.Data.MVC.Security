@@ -9,7 +9,7 @@
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
 <div class="addPost-car">
     <ul>
@@ -55,5 +55,13 @@
 </div>
 
 
+<form action="/signin/facebook" method="POST">
+    <input type="hidden" name="scope" value="public_profile" />
+    <input type="submit" value="Login using Facebook"/>
+</form>
+
+
 </body>
+
+
 </html>
