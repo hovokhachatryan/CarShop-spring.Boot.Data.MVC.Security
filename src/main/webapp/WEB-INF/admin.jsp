@@ -17,18 +17,22 @@
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a  href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
 
 <br><br><br>
-<ul>
+<div style="    margin-top: 3%;
+    margin-left: 6%;">
+    <ul>
     <c:forEach items="${users}" var="user">
-        <li>${user.name} ${user.surname} <a href="/deleteUser?id=${user.id}">DELETE</a></li>
+      <li><a href="/profileLook?id=${user.id}">${user.name} ${user.surname}</a></li> <li> <a style="color: red" href="/deleteUser?id=${user.id}">DELETE</a></li><br>
     </c:forEach>
-</ul>
+    </ul>
+</div>
 <br>
-All Posts:
-<div class="wrapper">
+
+<div class="wrapper" style="    margin-left: 28%;
+    margin-top: -4.9%;">
     <c:forEach items="${posts}" var="post">
         <a class="image" href="/getPost?id=${post.id}">
             <img src="/image?fileName=${post.picture.pic1}" width="240" height="200"/><br>
@@ -38,7 +42,9 @@ All Posts:
             <br>
             <div style="margin-left:-60%;color: black"> ${post.year}</div>
             <div style=" margin-top:-6.9%;margin-left: 60%;color: black"> $ ${post.price}<br></div>
-            <a style="" href="/deletePost?id=${post.id}">DELETE</a>
+            <br>
+            <a style="    margin-left: -24.5%;
+    margin-top: 30%;" href="/deletePost?id=${post.id}">DELETE</a>
         </a>
     </c:forEach>
 </div>

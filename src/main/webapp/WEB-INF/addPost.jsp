@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+
+
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -19,27 +23,30 @@
     <ul>
         <li>Մեքենաներ
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMarkLogin?mark=MERCEDES">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
-                    <li>BMW</li></a>
-                    <a href="/getPostByMark?mark=AUDI">
-                        <li>AUDI</li></a>
-                        <a href="/getPostByMark?mark=OPEL">
-                            <li>OPEL</li></a>
-                            <a href="/getPostByMark?mark=TOYOTA">
-                                <li>TOYOTA</li></a>
+                <a href="/getPostByMarkLogin?mark=BMW">
+                    <li>BMW</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=AUDI">
+                    <li>AUDI</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=OPEL">
+                    <li>OPEL</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=TOYOTA">
+                    <li>TOYOTA</li>
+                </a>
             </ul>
         </li>
-
 
     </ul>
 </div>
 <div class="addPost-myPage">
     <a href="/profile?id=${user.user.id}">
         <ul>
-            <li> Իմ Էջը</li>
+            <li>Իմ էջը</li>
         </ul>
     </a>
 </div>
@@ -89,24 +96,28 @@
         <spring:label cssStyle="color: #000000"
                       path="userTelephone">Հեռ․ համար<a style="color: red">*</a>:</spring:label>
         <spring:input path="userTelephone"/><br>
+
+        <spring:label cssStyle="color: #000000"
+                      path="description">Մեքենաի Մասին</spring:label>
+        <spring:input path="description"/><br>
         <%--<spring:select  items="${allCategories}" itemLabel="name"></spring:select><br>--%>
         <%--<spring:select path="brand" items="${allBrands}" itemLabel="name"></spring:select><br>--%>
-        <label style="color: #000000" for="image1">Նկար:<a style="color: red">*</a></label>
+        <label style="color: #000000" for="image1">Նկար1:<a style="color: red"></a></label>
         <input type="file" id="image1" name="image1"/><br>
 
-        <label style="color: #000000" for="image2">Նկար:</label>
+        <label style="color: #000000" for="image2">Նկար2:</label>
         <input type="file" id="image2" name="image2"/><br>
 
-        <label style="color: #000000" for="image3">Նկար:</label>
+        <label style="color: #000000" for="image3">Նկար3:</label>
         <input type="file" id="image3" name="image3"/><br>
 
-        <label style="color: #000000" for="image4">Նկար:<a style="color: red"></a></label>
+        <label style="color: #000000" for="image4">Նկար:4<a style="color: red"></a></label>
         <input type="file" id="image4" name="image4"/><br>
 
-        <label style="color: #000000" for="image5">Նկար:</label>
+        <label style="color: #000000" for="image5">Նկար:5</label>
         <input type="file" id="image5" name="image5"/><br>
 
-        <label style="color: #000000" for="image6">Նկար:</label>
+        <label style="color: #000000" for="image6">Նկար:6</label>
         <input type="file" id="image6" name="image6"/><br>
 
 

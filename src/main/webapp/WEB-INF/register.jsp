@@ -50,11 +50,8 @@
 
 </div>
 <div class="register-inputs">
-    <form action="/addUser" modelAttribute="" method="post">
-        <%--NAME:<spring:input path="name" title="name" /> * <br>--%>
-        <%--SURNAME:<spring:input path="surname" title="surname"/> *<br>--%>
-        <%--EMAIL:<spring:input path="email" title="email"/> *<br>--%>
-        <%--PASSWORD:<spring:input path="password" title="password"/> *<br>--%>
+    <form action="/addUser" method="post">
+
         <label style="color: #000000"><spring:message key="main.name"/> </label>
         <input type="text" name="name" placeholder=<spring:message key="placeholder.name"/>>
         <label style="color: #000000"><spring:message key="main.surname"/></label>
@@ -66,6 +63,8 @@
         <input type="submit" value="Գրանցվել">
     </form>
 </div>
+
+
 <div>
     <div class="register-login">
         <a href="/loginView">
@@ -75,6 +74,14 @@
         </a>
     </div>
 </div>
+<div class="index-armFlag">
+    <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
 </div>
+
+<div class="index-ruFlag">
+    <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
+</div>
+</div>
+
 </body>
 </html>

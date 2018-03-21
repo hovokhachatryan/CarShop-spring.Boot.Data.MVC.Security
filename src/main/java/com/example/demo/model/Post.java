@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
+
 
 @Entity
 @Table(name = "post")
@@ -28,6 +28,8 @@ public class Post {
     private double price;
     @Column
     private String color;
+    @Column
+    private String description;
     @ManyToOne()
     private User user;
     @Column(name = "user_telephone")
@@ -36,5 +38,6 @@ public class Post {
     private String timestamp;
     @ManyToOne()
     private Picture picture;
+
 
 }

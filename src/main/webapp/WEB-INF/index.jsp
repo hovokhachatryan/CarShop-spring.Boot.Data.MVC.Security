@@ -16,6 +16,8 @@
     <meta charset="UTF-8">
     <title>CarShop</title>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+
+
     <script src="../js/jquery.js"></script>
 </head>
 <body>
@@ -23,8 +25,10 @@
 
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a  href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
+
+
 <div class="addPost-car">
     <ul>
         <li>
@@ -50,10 +54,10 @@
 
     </ul>
 </div>
-<div class="index-login">
+<div class="index-add">
     <a href="/addPostView">
         <ul>
-            <li> <spring:message key="main.login"/></li>
+            <li> <spring:message key="main.add"/></li>
         </ul>
     </a>
 </div>
@@ -71,11 +75,18 @@
         </ul>
     </a>
 </div>
+<div class="index-armFlag">
+    <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
+</div>
+
+<div class="index-ruFlag">
+    <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
+</div>
+
+
 
 <style>
-    a[type=submit]:hover {
-        background-color: #909ca0;
-    }
+
 
     .wrapper {
         width: 1000px;
@@ -99,16 +110,37 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
 
     }
+    input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        margin-left: 18.4%;
+        margin-top: 3%;
+    }
+
+    input[type=text]:focus {
+        width: 63%;
+    }
 </style>
 <br><br>
 
-<input id="value" type="text"  placeholder=<spring:message key="placeholder.search"/> />
+<div>
+<input style="margin-left: 18.5%;"  id="value" type="text"  placeholder=<spring:message key="placeholder.search"/> />
+</div>
 
 <div class="wrapper">
     <c:forEach items="${posts}" var="post">
         <a class="image" href="/getPost?id=${post.id}">
             <img src="/image?fileName=${post.picture.pic1}" width="240" height="200"/><br>
-            <div style="margin-left: -43%;color: #8bc1ff">${post.mark}
+            <div style="margin-left: -35%;color: #8bc1ff">${post.mark}
                     ${post.model}<br>
             </div>
             <br>
@@ -119,33 +151,8 @@
 </div>
 
 
-<%--<spring:form action="/search" method="post" modelAttribute="post">--%>
-<%--<spring:label path="mark">Mark:</spring:label>--%>
-<%--<spring:select path="mark"> *--%>
-<%--<form:option disabled="false" value="">--%>
-<%--</form:option>--%>
-<%--<c:forEach items="${marks}" var="mark">--%>
-<%--<form:option value="${mark}">--%>
-<%--${mark}--%>
-<%--</form:option>--%>
-<%--</c:forEach>--%>
-<%--</spring:select>--%>
 
-<%--<spring:label path="year">Year:</spring:label>--%>
-<%--<spring:select path="year">--%>
-<%--<form:option disabled="false" value="0">--%>
-<%--</form:option>--%>
-<%--<c:forEach items="${years}" var="year">--%>
-<%--<form:option value="${year}">--%>
-<%--${year}--%>
-<%--</form:option>--%>
-<%--</c:forEach>--%>
-<%--</spring:select><br>--%>
 
-<%--<spring:label path="price">Price:</spring:label>--%>
-<%--<spring:input  path="price"/> *<br>--%>
-<%--<input type="submit" value="SEARCH">--%>
-<%--</spring:form>--%>
 </body>
 
 <script>

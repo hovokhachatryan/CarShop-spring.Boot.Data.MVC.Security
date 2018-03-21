@@ -17,8 +17,8 @@
 <body>
 <div>
     <img width="100%" height="100" src="img/fon.jpg">
-    <div class="indexLogin-logoCarShop">
-        <a  type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <div class="addPost-logoCarShop">
+        <a  href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
     </div>
     <div class="addPost-car">
         <ul>
@@ -44,11 +44,25 @@
 
         </ul>
     </div>
+    <div class="index-add">
+        <a href="/addPostView">
+            <ul>
+                <li> <spring:message key="main.add"/></li>
+            </ul>
+        </a>
+    </div>
     <div class="indexLogin-myPage">
         <a href="/profile?id=${user.user.id}"><ul><li> <spring:message key="main.profile"/> </li></ul></a>
     </div>
     <div class="index-login-logout">
         <a href="/logout"><ul><li> <spring:message key="main.logout"/> </li></ul></a>
+    </div>
+    <div class="index-armFlag">
+        <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
+    </div>
+
+    <div class="index-ruFlag">
+        <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
     </div>
 
     <style>
@@ -76,13 +90,35 @@
             margin: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
         }
+        input[type=text] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+            margin-left: 18.4%;
+            margin-top: 2%;
+        }
+
+        input[type=text]:focus {
+            width: 63%;
+        }
+
         .wrapper > a:hover { background-color: #d1d3d6; }
     </style>
     <%--<div style="margin-top:0.5%">--%>
     <%--<img width="100%" height="700"src="../img/LoginFon.jpg">--%>
     <%--</div>--%>
     <%--<a href="/logout">LOGOUT</a><br><br>--%>
-    <input placeholder="MARK,MODEL,PRICE,YEAR" id="value" type="text" />
+    <div>
+        <input style="margin-left: 18.5%;margin-top: 6%"  id="value" type="text"  placeholder=<spring:message key="placeholder.search"/> />
+    </div>
 
     <div class="wrapper">
         <c:forEach items="${posts}" var="post">

@@ -57,5 +57,14 @@ public class UserController {
         return "profile";
     }
 
+    @GetMapping(value = "/profileLook")
+    public String getProfileLook(@RequestParam("id") int id, ModelMap map) {
+        User user = userRepository.findOneById(id);
+        List<Post> posts = postRepository.findAllByUserId(id);
+        map.addAttribute("posts", posts);
+        map.addAttribute("user", user);
+        return "profileLook";
+    }
+
 
 }

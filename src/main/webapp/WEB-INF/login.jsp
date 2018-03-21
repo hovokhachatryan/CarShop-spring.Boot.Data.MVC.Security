@@ -9,7 +9,7 @@
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a type="submit" href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
 <div class="addPost-car">
     <ul>
@@ -35,12 +35,19 @@
 
     </ul>
 </div>
-<div class="login-myPage">
-    <ul><li> <spring:message key="main.profile"/> </li></ul>
-</div>
+
 <div class="index-register">
     <a href="/registerView"><ul><li> <spring:message key="main.register"/> </li></ul></a>
 </div>
+<div class="index-armFlag">
+    <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
+</div>
+
+<div class="index-ruFlag">
+    <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
+</div>
+
+
 <div style="margin-top:15%;margin-left:40%;width:300px;height:300px">
     <form action="<c:url value="/loginView"/> " method="post" name="loginForm">
         <label  style="margin-left:1%;margin-top:5% ;color: #000000">  <spring:message key="main.mail"/> </label>
@@ -49,17 +56,10 @@
         <label style="margin-top:5% ;margin-left:1%;color: #000000">  <spring:message key="main.password"/></label>
         <input  style="margin-top:5% ;margin-left:1%;width: 290px" type="password" name="j_password" placeholder=<spring:message key="placeholder.password"/>>
 
-        <input  style="margin-top:5%;width: 290px;margin-left:1%;" type="submit" value=<spring:message key="main.login"/>/>
+        <input  style="margin-top:5%;width: 290px;margin-left:1%;" type="submit" value=<spring:message key="main.login"/>>
     </form>
 
 </div>
-
-
-<form action="/signin/facebook" method="POST">
-    <input type="hidden" name="scope" value="public_profile" />
-    <input type="submit" value="Login using Facebook"/>
-</form>
-
 
 </body>
 

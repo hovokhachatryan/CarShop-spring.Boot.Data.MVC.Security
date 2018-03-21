@@ -8,10 +8,12 @@ ul {
     -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-body{
-   background-color: #ededed;
+
+body {
+    background-color: #ededed;
 
 }
+
 ul li {
     font: bold 12px/18px sans-serif;
     display: inline-block;
@@ -26,10 +28,12 @@ ul li {
     -o-transition: all 0.2s;
     transition: all 0.2s;
 }
+
 ul li:hover {
     background: #555;
     color: #fff;
 }
+
 ul li ul {
     padding: 0;
     position: absolute;
@@ -48,18 +52,24 @@ ul li ul {
     -o-transition: opacity 0.2s;
     -transition: opacity 0.2s;
 }
+
 ul li ul li {
     background: #555;
     display: block;
     color: #fff;
     text-shadow: 0 -1px 0 #000;
 }
-ul li ul li:hover { background: #666; }
+
+ul li ul li:hover {
+    background: #666;
+}
+
 ul li:hover ul {
     display: block;
     opacity: 1;
     visibility: visible;
 }
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
@@ -69,6 +79,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 input[type=password], select {
     width: 100%;
     padding: 12px 20px;
@@ -88,7 +99,10 @@ input[type=email], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-.wrapper > a:hover { background-color: #d1d3d6; }
+
+.wrapper > a:hover {
+    background-color: #d1d3d6;
+}
 
 input[type=submit] {
     width: 100%;
@@ -104,38 +118,47 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #a0953a;
 }
+
 div {
     border-radius: 5px;
 }
+
 a[type=submit]:hover {
     background-color: #909ca0;
 }
-.login-meqenamer{
-    margin-top:-3.4%;
-    margin-left:0.8%
+
+.login-meqenamer {
+    margin-top: -3.4%;
+    margin-left: 0.8%
 }
-.login-register{
-    margin-left:87%;
-    margin-top:-39.4%
+
+.login-register {
+    margin-left: 87%;
+    margin-top: -39.4%
 }
-.register-car{
-    margin-top:-3.4%;
-    margin-left:0.8%
+
+.register-car {
+    margin-top: -3.4%;
+    margin-left: 0.8%
 }
-.register-login{
-    margin-left:87%;
-    margin-top:-34.3%
+
+.register-login {
+    margin-left: 83%;
+    margin-top: -34.3%
 }
+
 .register-logoCarShop {
-    margin-left:8.9%;
-    margin-top:-5.2%
+    margin-left: 8.9%;
+    margin-top: -5.2%
 }
+
 .wrapper {
     width: 1000px;
     margin: auto;
     margin-top: 50px;
 }
-a{
+
+a {
     text-decoration: none;
 
 }
@@ -150,249 +173,318 @@ a{
     margin: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Параметры тени */
 }
-.wrapper > a:hover { background-color: #d1d3d6; }
-.index-login-cars{
-    margin-top:-3.4%;
-    margin-left:1%
-}
-.index-login-logout{
-    margin-left:84%;
-    margin-top:-3.4%
-}
-.addPost-car{
-    margin-top:-3.7%;
-    margin-left:1%
-}
-.index-logo-carShop{
-    margin-left:9%;
-    margin-top:-4.9%
 
-}
-.index-login{
-    margin-left:74%;
-    margin-top:-3.2%
-}
-.index-register{
-    margin-left:80%;
-    margin-top:-3.4%
-}
-.index-car{
-    margin-top:-3.7%;
-    margin-left:1%
-}
-.addPost-logout{
-   margin-left:80%;
-    margin-top:-3.4%
-}
-.login-logoCarShop{
-    margin-left:8.9%;
-    margin-top:-4.9%
-}
-.login-myPage{
-    margin-left:74%;
-    margin-top:-3.3%
-}
-.register-myPage{
-    margin-left:74%;
-    margin-top:-3.3%
-}
-.register-inputs{
-    margin-top:10%;
-    margin-left:33%;width:500px;
-    height:300px
-}
-.indexLogin-myPage{
-    margin-left:74%;
-    margin-top:-3.2%
-}
-.indexLogin-logoCarShop{
-    margin-left:9%;
-    margin-top:-4.9%
-}
-.addPost-myPage{
-    margin-left:74%;
-    margin-top:-3.3%
-}
-.addPost-logoCarShop{
-    margin-left:9%;
-    margin-top:-4.9%
-}
-.addPost-inputs{
-    width:25%;
-    height:25%;
-    margin-top:7%;
-    margin-left:35%
+.wrapper > a:hover {
+    background-color: #d1d3d6;
 }
 
+.index-login-cars {
+    margin-top: -3.4%;
+    margin-left: 1%
+}
 
-@media screen and (min-width: 1600px){
+.index-login-logout {
+    margin-left: 84%;
+    margin-top: -3.4%
+}
 
-    .index-register{
-        margin-left:79.5%;
-        margin-top:-3%;
+.addPost-car {
+    margin-top: -3.7%;
+    margin-left: 1%
+}
+
+.index-logo-carShop {
+    margin-left: 9%;
+    margin-top: -4.9%
+
+}
+
+.index-login {
+    margin-left: 74%;
+    margin-top: -3.2%
+}
+
+.index-register {
+    margin-left: 80%;
+    margin-top: -3.4%
+}
+
+.index-car {
+    margin-top: -3.7%;
+    margin-left: 1%
+}
+
+.addPost-logout {
+    margin-left: 80%;
+    margin-top: -3.4%
+}
+
+.login-logoCarShop {
+    margin-left: 8.9%;
+    margin-top: -4.9%
+}
+
+.login-myPage {
+    margin-left: 74%;
+    margin-top: -3.3%
+}
+
+.register-myPage {
+    margin-left: 74%;
+    margin-top: -3.3%
+}
+
+.register-inputs {
+    margin-top: 10%;
+    margin-left: 33%;
+    width: 500px;
+    height: 300px
+}
+
+.indexLogin-myPage {
+    margin-left: 74%;
+    margin-top: -3.2%
+}
+
+.indexLogin-logoCarShop {
+    margin-left: 9%;
+    margin-top: -4.9%
+}
+
+.addPost-myPage {
+    margin-left: 74%;
+    margin-top: -3.3%
+}
+
+.addPost-logoCarShop {
+    margin-left: 9%;
+    margin-top: -4.9%
+}
+
+.addPost-inputs {
+    width: 25%;
+    height: 25%;
+    margin-top: 7%;
+    margin-left: 35%
+}
+
+@media screen and (min-width: 1600px) {
+
+    .index-register {
+        margin-left: 79.5%;
+        margin-top: -3%;
+
     }
-    .index-car{
-        margin-top:-3.3%;
-        margin-left:1.5%
+
+    .index-car {
+        margin-top: -3.3%;
+        margin-left: 1.5%
     }
-    .login-meqenamer{
-        margin-top:-3.1%;
-        margin-left:1.5%
+
+    .index-add {
+        margin-top: -3.2%;
+        margin-left: 66%;
     }
-    .login-register{
-        margin-left:84%;
-        margin-top:-36.9%
+
+    .index-armFlag {
+        margin-left: 90%;
+        margin-top: -2%;
+
     }
-    .login-myPage{
-        margin-left:78.5%;
-        margin-top:-3%
+
+
+    .index-ruFlag {
+        margin-left: 93%;
+        margin-top: -1.4%;
     }
-    .register-car{
-        margin-top:-3.1%;
-        margin-left:1.5%
+
+    .login-meqenamer {
+        margin-top: -3.1%;
+        margin-left: 1.5%
     }
-    .register-myPage{
-        margin-left:81%;
-        margin-top:-2.7%
+
+    .login-register {
+        margin-left: 84%;
+        margin-top: -36.9%
     }
-    .register-login{
-        margin-left:87%;
-        margin-top:-32%
+
+    .login-myPage {
+        margin-left: 78.5%;
+        margin-top: -3%
     }
+
+    .register-car {
+        margin-top: -3.1%;
+        margin-left: 1.5%
+    }
+
+    .register-myPage {
+        margin-left: 81%;
+        margin-top: -2.7%
+    }
+
+    .register-login {
+        margin-left: 87%;
+        margin-top: -32%
+    }
+
     .register-logoCarShop {
-        margin-left:9.9%;
-        margin-top:-4.8%
+        margin-left: 9.9%;
+        margin-top: -4.8%
     }
+
     .wrapper {
         width: 1000px;
         margin: auto;
         margin-top: 4%;
     }
-    .index-login-cars{
-        margin-top:-3.1%;
-        margin-left:1.8%
-    }
-    .indexLogin-myPage{
-        margin-left:78.6%;
-        margin-top:-3%
-    }
-    .index-login-logout{
-        margin-left:84%;
-        margin-top:-3%
-    }
-    .addPost-car{
-        margin-top:-3.3%;
-        margin-left:1%
-    }
-    .addPost-logout{
-        margin-left:80%;
-        margin-top:-3%
+
+    .index-login-cars {
+        margin-top: -3.1%;
+        margin-left: 1.8%
     }
 
+    .indexLogin-myPage {
+        margin-left: 78.6%;
+        margin-top: -3%
+    }
 
+    .index-login-logout {
+        margin-left: 84%;
+        margin-top: -3%
+    }
 
+    .addPost-car {
+        margin-top: -3.3%;
+        margin-left: 1%
+    }
+
+    .addPost-logout {
+        margin-left: 80%;
+        margin-top: -3%
+    }
 
 }
-@media screen and (min-width: 1920px){
 
-    .index-register{
-        margin-left:79.5%;
-        margin-top:-2.5%;
+@media screen and (min-width: 1920px) {
+
+    .index-register {
+        margin-left: 79.5%;
+        margin-top: -2.5%;
     }
-    .index-logo-carShop{
-        margin-left:9%;
-        margin-top:-4%
+
+    .index-logo-carShop {
+        margin-left: 9%;
+        margin-top: -4%
     }
-    .index-car{
-        margin-top:-2.8%;
-        margin-left:2.5%
+
+    .index-car {
+        margin-top: -2.8%;
+        margin-left: 2.5%
     }
-    .index-login{
-        margin-left:75%;
-        margin-top:-2.6%
+
+    .index-login {
+        margin-left: 75%;
+        margin-top: -2.6%
     }
-    .login-meqenamer{
-        margin-top:-2.5%;
-        margin-left:2.5%
+
+    .login-meqenamer {
+        margin-top: -2.5%;
+        margin-left: 2.5%
     }
-    .login-myPage{
-        margin-left:79.3%;
-        margin-top:-2.8%
+
+    .login-myPage {
+        margin-left: 79.3%;
+        margin-top: -2.8%
     }
-    .login-logoCarShop{
-        margin-left:8.9%;
-        margin-top:-3.7%
+
+    .login-logoCarShop {
+        margin-left: 8.9%;
+        margin-top: -3.7%
     }
-    .login-register{
-        margin-left:84%;
-        margin-top:-33.2%
+
+    .login-register {
+        margin-left: 84%;
+        margin-top: -33.2%
     }
-    .register-car{
-        margin-top:-2.5%;
-        margin-left:2.7%
+
+    .register-car {
+        margin-top: -2.5%;
+        margin-left: 2.7%
     }
-    .register-login{
-        margin-left:87%;
-        margin-top:-32.2%
+
+    .register-login {
+        margin-left: 87%;
+        margin-top: -32.2%
     }
-    .register-myPage{
-        margin-left:82.2%;
-        margin-top:-2.6%
+
+    .register-myPage {
+        margin-left: 82.2%;
+        margin-top: -2.6%
     }
+
     .register-logoCarShop {
-        margin-left:8.9%;
-        margin-top:-3.9%
+        margin-left: 8.9%;
+        margin-top: -3.9%
     }
-    .register-inputs{
-        margin-top:14%;
-        margin-left:36%;
-        width:500px;
-        height:300px
+
+    .register-inputs {
+        margin-top: 14%;
+        margin-left: 36%;
+        width: 500px;
+        height: 300px
     }
+
     .wrapper {
         width: 1000px;
         margin: auto;
         margin-top: 4%;
     }
-    .index-login-cars{
-        margin-top:-2.5%;
-        margin-left:2.6%
-    }
-    .indexLogin-logoCarShop{
-        margin-left:9%;
-        margin-top:-3.9%
-    }
-    .index-login-logout{
-        margin-left:84%;
-        margin-top:-2.5%
+
+    .index-login-cars {
+        margin-top: -2.5%;
+        margin-left: 2.6%
     }
 
-    .indexLogin-myPage{
-        margin-left:79%;
-        margin-top:-2.5%
+    .indexLogin-logoCarShop {
+        margin-left: 9%;
+        margin-top: -3.9%
     }
 
+    .index-login-logout {
+        margin-left: 84%;
+        margin-top: -2.5%
+    }
 
-    .addPost-car{
-        margin-top:-2.8%;
-        margin-left:2.5%
+    .indexLogin-myPage {
+        margin-left: 79%;
+        margin-top: -2.5%
     }
-    .addPost-logout{
-        margin-left:80%;
-        margin-top:-2.5%
+
+    .addPost-car {
+        margin-top: -2.8%;
+        margin-left: 2.5%
     }
-    .addPost-myPage{
-        margin-left:75%;
-        margin-top:-2.6%
+
+    .addPost-logout {
+        margin-left: 80%;
+        margin-top: -2.5%
     }
-    .addPost-logoCarShop{
-        margin-left:9%;
-        margin-top:-4.2%
+
+    .addPost-myPage {
+        margin-left: 75%;
+        margin-top: -2.6%
     }
-    .addPost-inputs{
-        width:25%;
-        height:25%;
-        margin-top:8%;
-        margin-left:38%
+
+    .addPost-logoCarShop {
+        margin-left: 9%;
+        margin-top: -4.2%
+    }
+
+    .addPost-inputs {
+        width: 25%;
+        height: 25%;
+        margin-top: 8%;
+        margin-left: 38%
     }
 }
