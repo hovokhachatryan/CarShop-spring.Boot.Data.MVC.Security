@@ -3,7 +3,6 @@ package com.example.demo.contoller;
 import com.example.demo.model.Picture;
 import com.example.demo.model.Post;
 import com.example.demo.model.User;
-import com.example.demo.model.UserType;
 import com.example.demo.repository.PictureRepository;
 import com.example.demo.repository.PostRepository;
 import com.example.demo.security.CurrentUser;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileInputStream;
@@ -24,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class PostController {
@@ -34,7 +33,6 @@ public class PostController {
     @Autowired
     PictureRepository pictureRepository;
 
-
     @Value("${eshop.product.upload.path}")
     private String imageUploadPath;
 
@@ -42,13 +40,31 @@ public class PostController {
     public String addPostView(ModelMap map) {
         List<String> marks = new LinkedList<>();
         List<Integer> year = new LinkedList<>();
-        marks.add("MERCEDES");
-        marks.add("BMW");
-        marks.add("AUDI");
-        marks.add("LEXUS");
-        marks.add("TOYOTA");
-        marks.add("OPEL");
-        for (int i = 2000; i < 2019; i++) {
+        marks.add("Alfa Romeo");
+        marks.add("Audi");
+        marks.add("Bentley");
+        marks.add("Bmw");
+        marks.add("Bugatti");
+        marks.add("Cadillac");
+        marks.add("Chevrolet");
+        marks.add("Citroen");
+        marks.add("Ford");
+        marks.add("Honda");
+        marks.add("Hummer");
+        marks.add("Hyundai");
+        marks.add("Kia");
+        marks.add("Land Rover");
+        marks.add("Lexus");
+        marks.add("Mazda");
+        marks.add("Mercedes-Benz");
+        marks.add("Mitshubishi");
+        marks.add("Nissan");
+        marks.add("Niva");
+        marks.add("Opel");
+        marks.add("Porsche");
+        marks.add("Toyota");
+
+        for (int i = 1990; i < 2019; i++) {
             year.add(i);
         }
         map.addAttribute("marks", marks);
@@ -67,7 +83,6 @@ public class PostController {
         if (post.getMark() == null || post.getModel() == null || post.getPrice() == 0 || post.getYear() == 0 || post.getColor() == null) {
             return "redirect:/addPostView";
         } else  {
-
             File dir = new File(imageUploadPath);
             if (!dir.exists()) {
                 dir.mkdir();
@@ -120,7 +135,7 @@ public class PostController {
     }
 
     @GetMapping(value = "/getPost")
-    public String getPost(@RequestParam("id") int id, ModelMap map) {
+    public String getPost(@RequestParam("id") int id, ModelMap map,Locale locale) {
         Post post = postRepository.getOne(id);
         map.addAttribute("post", post);
         return "postView";
@@ -154,7 +169,7 @@ public class PostController {
     @GetMapping(value = "/deleteMyPost")
     public String deletePostUser(@RequestParam("id") int id) {
         postRepository.delete(id);
-        return "redirect:/profile";
+        return "redirect:/loginSuccess";
     }
 
     @GetMapping(value = "/deletePost")
@@ -162,6 +177,5 @@ public class PostController {
         postRepository.delete(id);
         return "redirect:/adminPage";
     }
-
 
 }

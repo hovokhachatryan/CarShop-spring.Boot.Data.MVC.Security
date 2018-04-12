@@ -4,7 +4,6 @@ import com.example.demo.model.User;
 import com.example.demo.model.UserType;
 import org.springframework.security.core.authority.AuthorityUtils;
 
-
 public class CurrentUser extends org.springframework.security.core.userdetails.User {
     private User user;
 

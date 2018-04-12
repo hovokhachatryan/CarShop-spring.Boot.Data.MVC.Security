@@ -11,19 +11,15 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-
 
     @Autowired
     private UserDetailsService userDetailsService;
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -38,7 +34,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logoutSuccessUrl("/")
                 .and()
                 .authorizeRequests()
-                .antMatchers("/addPostView").hasAuthority("USER")
+                .antMatchers("/addPostView").hasAnyAuthority("USER","ADMIN")
+                .antMatchers("/profileLook").hasAnyAuthority("USER","ADMIN")
+                .antMatchers("/profile").hasAnyAuthority("USER","ADMIN")
                 .antMatchers("/adminPage").hasAuthority("ADMIN")
                 .anyRequest().permitAll();
     }
@@ -54,7 +52,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
-
 
 }
 

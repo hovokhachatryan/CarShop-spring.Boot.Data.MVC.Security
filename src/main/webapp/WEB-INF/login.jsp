@@ -11,24 +11,24 @@
 <div class="addPost-logoCarShop">
     <a href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
-<div class="addPost-car">
+<div class="login-meqenamer">
     <ul>
         <li><spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMark?mark=Mercedes-Benz">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
-                    <li>BMW</li>
+                <a href="/getPostByMark?mark=Bmw">
+                    <li>Bmw</li>
                 </a>
-                <a href="/getPostByMark?mark=AUDI">
-                    <li>AUDI</li>
+                <a href="/getPostByMark?mark=Audi">
+                    <li>Audi</li>
                 </a>
-                <a href="/getPostByMark?mark=OPEL">
-                    <li>OPEL</li>
+                <a href="/getPostByMark?mark=Lexus">
+                    <li>Lexus</li>
                 </a>
-                <a href="/getPostByMark?mark=TOYOTA">
-                    <li>TOYOTA</li>
+                <a href="/getPostByMark?mark=Toyota">
+                    <li>Toyota</li>
                 </a>
             </ul>
         </li>
@@ -43,7 +43,7 @@
     <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
 </div>
 
-<div class="index-ruFlag">
+<div class="login-ruFlag">
     <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
 </div>
 
@@ -54,7 +54,7 @@
         <input style="margin-left:1%;width:290px;margin-top:5% ;" type="email" id="fname" name="j_email" placeholder=<spring:message key="placeholder.mail"/>>
 
         <label style="margin-top:5% ;margin-left:1%;color: #000000">  <spring:message key="main.password"/></label>
-        <input  style="margin-top:5% ;margin-left:1%;width: 290px" type="password" name="j_password" placeholder=<spring:message key="placeholder.password"/>>
+        <input  style="margin-top:5% ;margin-left:1%;width: 290px" minlength="5" type="password" name="j_password" placeholder=<spring:message key="placeholder.password"/>>
 
         <input  style="margin-top:5%;width: 290px;margin-left:1%;" type="submit" value=<spring:message key="main.login"/>>
     </form>

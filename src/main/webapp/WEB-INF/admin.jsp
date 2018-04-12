@@ -17,7 +17,51 @@
 <body>
 <img width="100%" height="100" src="img/fon.jpg">
 <div class="addPost-logoCarShop">
-    <a  href="/home"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+    <a  href="/adminPage"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
+</div>
+<div class="index-login-cars">
+    <ul>
+        <li><spring:message key="main.cars"/>
+            <ul>
+                <a href="/getPostByMarkLogin?mark=Mercedes-Benz">
+                    <li>Mercedes-Benz</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=Bmw">
+                    <li>Bmw</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=Audi">
+                    <li>Audi</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=Lexus">
+                    <li>Lexus</li>
+                </a>
+                <a href="/getPostByMarkLogin?mark=Toyota">
+                    <li>Lexus</li>
+                </a>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+<div class="indexLogin-add">
+    <a href="/addPostView">
+        <ul>
+            <li> <spring:message key="main.add"/></li>
+        </ul>
+    </a>
+</div>
+<div class="indexLogin-myPage">
+    <a href="/profile?id=${user.id}"><ul><li> <spring:message key="main.profile"/> </li></ul></a>
+</div>
+<div class="index-login-logout">
+    <a href="/logout"><ul><li> <spring:message key="main.logout"/> </li></ul></a>
+</div>
+<div class="index-armFlag">
+    <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
+</div>
+
+<div class="index-ruFlag">
+    <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
 </div>
 
 <br><br><br>
@@ -25,7 +69,7 @@
     margin-left: 6%;">
     <ul>
     <c:forEach items="${users}" var="user">
-      <li><a href="/profileLook?id=${user.id}">${user.name} ${user.surname}</a></li> <li> <a style="color: red" href="/deleteUser?id=${user.id}">DELETE</a></li><br>
+        <a href="/profileLook?id=${user.id}"><li> ${user.name} ${user.surname}</a> <a style="color: red" href="/deleteUser?id=${user.id}"><li><spring:message key="main.delete"/></li></a><br><br>
     </c:forEach>
     </ul>
 </div>
@@ -34,7 +78,7 @@
 <div class="wrapper" style="    margin-left: 28%;
     margin-top: -4.9%;">
     <c:forEach items="${posts}" var="post">
-        <a class="image" href="/getPost?id=${post.id}">
+        <a class="image" href="/getPostLogin?id=${post.id}">
             <img src="/image?fileName=${post.picture.pic1}" width="240" height="200"/><br>
             <div style="margin-left: -43%;color: #8bc1ff">${post.mark}
                     ${post.model}<br>
@@ -44,11 +88,12 @@
             <div style=" margin-top:-6.9%;margin-left: 60%;color: black"> $ ${post.price}<br></div>
             <br>
             <a style="    margin-left: -24.5%;
-    margin-top: 30%;" href="/deletePost?id=${post.id}">DELETE</a>
+    margin-top: 30%;" href="/deletePost?id=${post.id}"><spring:message key="main.delete"/></a>
         </a>
     </c:forEach>
 </div>
 <style>
+
     a[type=submit]:hover {
         background-color: #909ca0;
     }
@@ -61,7 +106,6 @@
 
     a {
         text-decoration: none;
-
     }
 
     .wrapper > a {

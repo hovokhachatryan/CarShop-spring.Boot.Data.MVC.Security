@@ -1,12 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://java.sun.com/jsp/jstl/fmt" %>
--<%--
--  Created by IntelliJ IDEA.
--  User: User
--  Date: 27.02.2018
--  Time: 23:54
--  To change this template use File | Settings | File Templates.
----%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -23,27 +17,56 @@
         <li>
             <spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMark?mark=Mercedes-Benz">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
-                    <li>BMW</li>
+                <a href="/getPostByMark?mark=Bmw">
+                    <li>Bmw</li>
                 </a>
-                <a href="/getPostByMark?mark=AUDI">
-                    <li>AUDI</li>
+                <a href="/getPostByMark?mark=Audi">
+                    <li>Audi</li>
                 </a>
-                <a href="/getPostByMark?mark=OPEL">
-                    <li>OPEL</li>
+                <a href="/getPostByMark?mark=Lexus">
+                    <li>Lexus</li>
                 </a>
-                <a href="/getPostByMark?mark=TOYOTA">
-                    <li>TOYOTA</li>
+                <a href="/getPostByMark?mark=Toyota">
+                    <li>Toyota</li>
                 </a>
             </ul>
         </li>
 
     </ul>
 </div>
+<div class="index-add">
+    <a href="/addPostView">
+        <ul>
+            <li> <spring:message key="main.add"/></li>
+        </ul>
+    </a>
+</div>
+<div class="index-login">
+    <a href="/loginView">
+        <ul>
+            <li> <spring:message key="main.login"/></li>
+        </ul>
+    </a>
+</div>
+<div class="index-register">
+    <a href="/registerView">
+        <ul>
+            <li> <spring:message key="main.register"/></li>
+        </ul>
+    </a>
+</div>
 
+<div class="index-armFlag">
+    <a  href="&lang=hy"><img  src="../img/if_AM_167756.png"></a>
+</div>
+
+<div class="index-ruFlag">
+    <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
+</div>
+<br><br><br><br>
 <div class="wrapper">
     <c:forEach items="${posts}" var="post">
         <a class="image" href="/getPost?id=${post.id}">

@@ -194,7 +194,7 @@ a {
 }
 
 .index-logo-carShop {
-    margin-left: 9%;
+    margin-left: 9.5%;
     margin-top: -4.9%
 
 }
@@ -257,7 +257,7 @@ a {
 }
 
 .addPost-logoCarShop {
-    margin-left: 9%;
+    margin-left: 9.6%;
     margin-top: -4.9%
 }
 
@@ -270,6 +270,16 @@ a {
 
 @media screen and (min-width: 1600px) {
 
+    .indexLogin-add{
+        margin-left: 67.9%;
+        margin-top: -3%;
+    }
+
+
+    .login-ruFlag{
+        margin-left: 93%;
+        margin-top: -1.1%;
+    }
     .index-register {
         margin-left: 79.5%;
         margin-top: -3%;
@@ -280,11 +290,16 @@ a {
         margin-top: -3.3%;
         margin-left: 1.5%
     }
-
+    .index-login {
+        margin-left: 74%;
+        margin-top: -3%;
+    }
     .index-add {
         margin-top: -3.2%;
-        margin-left: 66%;
+        margin-left: 66.5%;
     }
+
+
 
     .index-armFlag {
         margin-left: 90%;
@@ -297,10 +312,9 @@ a {
         margin-left: 93%;
         margin-top: -1.4%;
     }
-
     .login-meqenamer {
-        margin-top: -3.1%;
-        margin-left: 1.5%
+        margin-top: -3%;
+        margin-left: 1.5%;
     }
 
     .login-register {
@@ -314,8 +328,8 @@ a {
     }
 
     .register-car {
-        margin-top: -3.1%;
-        margin-left: 1.5%
+        margin-top: -3%;
+        margin-left: 2.4%
     }
 
     .register-myPage {
@@ -324,12 +338,12 @@ a {
     }
 
     .register-login {
-        margin-left: 87%;
+        margin-left: 84%;
         margin-top: -32%
     }
 
     .register-logoCarShop {
-        margin-left: 9.9%;
+        margin-left: 10.3%;
         margin-top: -4.8%
     }
 
@@ -340,13 +354,13 @@ a {
     }
 
     .index-login-cars {
-        margin-top: -3.1%;
+        margin-top: -3%;
         margin-left: 1.8%
     }
 
     .indexLogin-myPage {
-        margin-left: 78.6%;
-        margin-top: -3%
+        margin-left: 77%;
+        margin-top: -3%;
     }
 
     .index-login-logout {
@@ -361,7 +375,32 @@ a {
 
     .addPost-logout {
         margin-left: 80%;
-        margin-top: -3%
+        margin-top: -3.1%
+    }
+    .post-login {
+        margin-top: -3%;
+        margin-left: 2%;
+    }
+    .Post-logoCarShop {
+        margin-left: 10%;
+        margin-top: -4.8%;
+    }
+    .index-login-logout {
+        margin-left: 84%;
+        margin-top: -3.1%;
+    }
+    .indexLogin-add {
+        margin-top: -3.2%;
+        margin-left: 69%;
+    }
+
+    .indexLogin-ruFlag {
+        margin-left: 93%;
+        margin-top: -1.1%;
+    }
+    .post-login {
+        margin-top: -3%;
+        margin-left: 2%;
     }
 
 }
@@ -372,6 +411,10 @@ a {
         margin-left: 79.5%;
         margin-top: -2.5%;
     }
+    .index-add {
+        margin-top: -2.6%;
+        margin-left: 69.3%;
+    }
 
     .index-logo-carShop {
         margin-left: 9%;
@@ -380,12 +423,16 @@ a {
 
     .index-car {
         margin-top: -2.8%;
-        margin-left: 2.5%
+        margin-left: 2.6%
     }
 
     .index-login {
         margin-left: 75%;
-        margin-top: -2.6%
+        margin-top: -2.5%
+    }
+    .index-ruFlag {
+        margin-left: 93%;
+        margin-top: -1.2%;
     }
 
     .login-meqenamer {
@@ -396,6 +443,10 @@ a {
     .login-myPage {
         margin-left: 79.3%;
         margin-top: -2.8%
+    }
+    .login-ruFlag {
+        margin-left: 93%;
+        margin-top: -1%;
     }
 
     .login-logoCarShop {
@@ -414,7 +465,7 @@ a {
     }
 
     .register-login {
-        margin-left: 87%;
+        margin-left: 85%;
         margin-top: -32.2%
     }
 
@@ -457,7 +508,7 @@ a {
     }
 
     .indexLogin-myPage {
-        margin-left: 79%;
+        margin-left: 77%;
         margin-top: -2.5%
     }
 
@@ -486,5 +537,34 @@ a {
         height: 25%;
         margin-top: 8%;
         margin-left: 38%
+    }
+    .post-login {
+        margin-top: -2.5%;
+        margin-left: 2.8%;
+    }
+    .Post-logoCarShop {
+        margin-left: 10%;
+        margin-top: -4%;
+    }
+    .indexLogin-add {
+        margin-top: -2.7%;
+        margin-left: 70.2%;
+    }
+    .postLogout-carshop {
+        margin-top: -4%;
+        margin-left: 8%;
+    }
+    .postLogout-car{
+
+        margin-top: -2.5%;
+        margin-left: 1.6%;
+    }
+    .postLogout-Login{
+        margin-left: 79%;
+        margin-top: -2.5%;
+    }
+    .postLogout-register{
+        margin-left: 85%;
+        margin-top: -2.5%;
     }
 }

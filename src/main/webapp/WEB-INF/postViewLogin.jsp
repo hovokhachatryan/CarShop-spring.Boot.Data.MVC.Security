@@ -38,28 +38,28 @@
         height: 100
     }
 </style>
-<div class="addPost-logoCarShop">
+<div class="Post-logoCarShop">
     <a type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
-<div class="addPost-car">
+<div class="post-login">
     <ul>
         <li>
             <spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMarkLogin?mark=Mercedes-Benz">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
-                    <li>BMW</li>
+                <a href="/getPostByMarkLogin?mark=Bmw">
+                    <li>Bmw</li>
                 </a>
-                <a href="/getPostByMark?mark=AUDI">
-                    <li>AUDI</li>
+                <a href="/getPostByMarkLogin?mark=Audi">
+                    <li>Audi</li>
                 </a>
-                <a href="/getPostByMark?mark=OPEL">
-                    <li>OPEL</li>
+                <a href="/getPostByMarkLogin?mark=Lexus">
+                    <li>Lexus</li>
                 </a>
-                <a href="/getPostByMark?mark=TOYOTA">
-                    <li>TOYOTA</li>
+                <a href="/getPostByMarkLogin?mark=Toyota">
+                    <li>Lexus</li>
                 </a>
             </ul>
         </li>
@@ -70,6 +70,13 @@
     </div>
     <div class="index-login-logout">
         <a href="/logout"><ul><li> <spring:message key="main.logout"/> </li></ul></a>
+    </div>
+    <div class="index-armFlag">
+        <a  href="getPostLogin?id=${post.id}&lang=hy"><img  src="../img/if_AM_167756.png"></a>
+    </div>
+
+    <div class="index-ruFlag">
+        <a  href="getPostLogin?id=${post.id}&lang=ru"><img  src="../img/if_RU_167813.png"></a>
     </div>
 
 </div>

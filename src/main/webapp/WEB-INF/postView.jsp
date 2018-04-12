@@ -45,20 +45,20 @@
         <li>
             <spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMark?mark=MERCEDES">
+                <a href="/getPostByMark?mark=Mercedes-Benz">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMark?mark=BMW">
-                    <li>BMW</li>
+                <a href="/getPostByMark?mark=Bmw">
+                    <li>Bmw</li>
                 </a>
-                <a href="/getPostByMark?mark=AUDI">
-                    <li>AUDI</li>
+                <a href="/getPostByMark?mark=Audi">
+                    <li>Audi</li>
                 </a>
-                <a href="/getPostByMark?mark=OPEL">
-                    <li>OPEL</li>
+                <a href="/getPostByMark?mark=Lexus">
+                    <li>Lexus</li>
                 </a>
-                <a href="/getPostByMark?mark=TOYOTA">
-                    <li>TOYOTA</li>
+                <a href="/getPostByMark?mark=Toyota">
+                    <li>Toyota</li>
                 </a>
             </ul>
         </li>
@@ -77,6 +77,13 @@
                 <li><spring:message key="main.register"/></li>
             </ul>
         </a>
+    </div>
+    <div class="index-armFlag">
+        <a  href="/getPost?id=${post.id}&lang=hy"><img  src="../img/if_AM_167756.png"></a>
+    </div>
+
+    <div class="index-ruFlag">
+        <a  href="/getPost?id=${post.id}&lang=ru"><img  src="../img/if_RU_167813.png"></a>
     </div>
 
 </div>

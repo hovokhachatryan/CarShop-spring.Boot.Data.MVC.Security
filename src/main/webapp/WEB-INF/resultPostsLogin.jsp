@@ -18,29 +18,28 @@
 <div class="addPost-logoCarShop">
     <a type="submit" href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
 </div>
-<div class="addPost-car">
+<div class="index-login-cars">
     <ul>
         <li>
             <spring:message key="main.cars"/>
             <ul>
-                <a href="/getPostByMarkLogin?mark=MERCEDES">
+                <a href="/getPostByMarkLogin?mark=Mercedes-Benz">
                     <li>Mercedes-Benz</li>
                 </a>
-                <a href="/getPostByMarkLogin?mark=BMW">
-                    <li>BMW</li>
+                <a href="/getPostByMarkLogin?mark=Bmw">
+                    <li>Bmw</li>
                 </a>
-                <a href="/getPostByMarkLogin?mark=AUDI">
-                    <li>AUDI</li>
+                <a href="/getPostByMarkLogin?mark=Audi">
+                    <li>Audi</li>
                 </a>
-                <a href="/getPostByMarkLogin?mark=OPEL">
-                    <li>OPEL</li>
+                <a href="/getPostByMarkLogin?mark=Lexus">
+                    <li>Lexus</li>
                 </a>
-                <a href="/getPostByMarkLogin?mark=TOYOTA">
-                    <li>TOYOTA</li>
+                <a href="/getPostByMarkLogin?mark=Toyota">
+                    <li>Lexus</li>
                 </a>
             </ul>
         </li>
-
     </ul>
 </div>
 <div class="indexLogin-myPage">

@@ -20,31 +20,31 @@
     <div class="addPost-logoCarShop">
         <a  href="/loginSuccess"><img style="width:130px;height:48px" src="img/LogoCarShopddad.jpg"></a>
     </div>
-    <div class="addPost-car">
+    <div class="index-login-cars">
         <ul>
             <li><spring:message key="main.cars"/>
                 <ul>
-                    <a href="/getPostByMarkLogin?mark=MERCEDES">
+                    <a href="/getPostByMarkLogin?mark=Mercedes-Benz">
                         <li>Mercedes-Benz</li>
                     </a>
-                    <a href="/getPostByMarkLogin?mark=BMW">
-                        <li>BMW</li>
+                    <a href="/getPostByMarkLogin?mark=Bmw">
+                        <li>Bmw</li>
                     </a>
-                    <a href="/getPostByMarkLogin?mark=AUDI">
-                        <li>AUDI</li>
+                    <a href="/getPostByMarkLogin?mark=Audi">
+                        <li>Audi</li>
                     </a>
-                    <a href="/getPostByMarkLogin?mark=OPEL">
-                        <li>OPEL</li>
+                    <a href="/getPostByMarkLogin?mark=Lexus">
+                        <li>Lexus</li>
                     </a>
-                    <a href="/getPostByMarkLogin?mark=TOYOTA">
-                        <li>TOYOTA</li>
+                    <a href="/getPostByMarkLogin?mark=Toyota">
+                        <li>Lexus</li>
                     </a>
                 </ul>
             </li>
 
         </ul>
     </div>
-    <div class="index-add">
+    <div class="indexLogin-add">
         <a href="/addPostView">
             <ul>
                 <li> <spring:message key="main.add"/></li>
@@ -61,7 +61,7 @@
         <a  href="?lang=hy"><img  src="../img/if_AM_167756.png"></a>
     </div>
 
-    <div class="index-ruFlag">
+    <div class="indexLogin-ruFlag">
         <a  href="?lang=ru"><img  src="../img/if_RU_167813.png"></a>
     </div>
 
@@ -77,7 +77,6 @@
         }
         a{
             text-decoration: none;
-
         }
 
         .wrapper > a {
@@ -112,10 +111,7 @@
 
         .wrapper > a:hover { background-color: #d1d3d6; }
     </style>
-    <%--<div style="margin-top:0.5%">--%>
-    <%--<img width="100%" height="700"src="../img/LoginFon.jpg">--%>
-    <%--</div>--%>
-    <%--<a href="/logout">LOGOUT</a><br><br>--%>
+
     <div>
         <input style="margin-left: 18.5%;margin-top: 6%"  id="value" type="text"  placeholder=<spring:message key="placeholder.search"/> />
     </div>

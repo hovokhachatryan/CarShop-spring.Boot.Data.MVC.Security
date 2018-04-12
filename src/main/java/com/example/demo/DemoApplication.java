@@ -35,6 +35,7 @@ public class DemoApplication extends WebMvcConfigurerAdapter {
 		bean.setSuffix(".jsp");
 		return bean;
 	}
+
 	@Bean
 	public LocaleResolver localeResolver() {
 		SessionLocaleResolver slr = new SessionLocaleResolver();
